@@ -29,7 +29,7 @@
         <lombok.version>1.18.8</lombok.version>
 
         <!-- tomcat-embed -->
-        <tomcat-embed.version>9.0.13</tomcat-embed.version>
+        <tomcat-embed.version>9.0.30</tomcat-embed.version>
 
     </properties>
 
