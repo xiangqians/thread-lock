@@ -51,11 +51,11 @@ public final class CASLock {
         Thread currentThread = Thread.currentThread();
         if (ownerThread == currentThread) {
 
-            // 更新已经执行了的缓存线程节点状态
-            workThreadCache.beenExecuted(currentThread);
-
             // 获取缓存中的工作线程
             ownerThread = workThreadCache.get();
+			
+			// 更新已经执行了的缓存线程节点状态
+            workThreadCache.beenExecuted(currentThread);
 
             // 唤醒缓存中工作线程
             if (ownerThread != null) {
